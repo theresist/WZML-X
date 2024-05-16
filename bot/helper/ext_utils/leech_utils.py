@@ -21,7 +21,7 @@ from bot.helper.ext_utils.telegraph_helper import telegraph
 
 async def is_multi_streams(path):
     try:
-        result = await cmd_exec(["ffprobe", "-hide_banner", "-loglevel", "error", "-print_format",
+        result = awit cmd_exec(["ffprobe", "-hide_banner", "-loglevel", "error", "-print_format",
                                  "json", "-show_streams", path])
         if res := result[1]:
             LOGGER.warning(f'Get Video Streams: {res}')
